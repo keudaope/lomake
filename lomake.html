@@ -2,9 +2,40 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="lomake.css">
     <title></title>
   </head>
   <body>
-
-  </body>       sadfgsdfg
+    <h1>Kirjautumislomake</h1>
+    <form class="" action="index.html" method="post">
+      <table>
+        <tr>
+          <td>Nimi: </td>
+          <td><input type="text" id="nimi" value=""></td>
+        </tr>
+        <tr>
+          <td>Salasana: </td>
+          <td><input type="password" id="salasana" value=""></td>
+        </tr>
+      </table>
+      <p class='piilossa'>Tätä tietoa ei näytetä käyttäjälle</p>
+      <p>Millainen koneenkäyttäjä olet?<br/>
+      <input type="radio" name="pelaaja" value="himo">himopelaaja<br/>
+      <input type="radio" name="pelaaja" value="opiskelu">käytän opiskeluun<br/>
+      <input type="radio" name="pelaaja" value="ei">en käytä konetta<br/></p>
+      <p>Mitä mieltä olet sivuistani tähän asti?<br/>
+      <input type="checkbox" name="sivut" value="hienot">Todella hienot!<br/>
+      <input type="checkbox" name="sivut" value="ammatti">Ammattimaisesti tehdyt<br/>
+      <input type="checkbox" name="sivut" value="ostan">Ostan sinulta </p>
+      <p>Mikä on lempiaineesi Keudassa?
+      <select class="" name="lempiaine"><br/>
+        <option value=""></option>
+        <option value="matematiikka">Matematiikka</option>
+        <option value="kielet">Kielet</option>
+        <option value="ammatti">Ammattiaineet</option>
+      </select></p>
+      <p>Kerro, miten kehittäisit sivujani:<br/>
+      <textarea name="kehitys" rows="8" cols="50"></textarea> </p>
+    </form>
+  </body>
 </html>

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+form{
+  width: 400px;
+  height: 450px;
+  vertical-align: middle;
+  background-color: #456321;
+  color: yellow;
+  padding: 20px;
+}
+.piilossa
+{
+  display: none;
+}
+h1{
+  font-family: Pacifico;
+}
+body{
+  background-image: url('lukko.png');
+}
