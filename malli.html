@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="malli.js">
+
+    </script>
+  </head>
+  <body>
+    <form class="" action="malli.html" method="post" onsubmit="return tarkasta(this)" onreset="return tyhjenna(this)">
+      <p>Anna etunimi: <input type="text" name="enimi" value=""> </p>
+      <p>Anna sukunimi: <input type="text" name="snimi" value=""> </p>
+      <p>Anna sähköpostisi: <input type="text" name="email" value=""> </p>
+      <p>Palautteesi kotisivuistani:</p>
+      <textarea name="palaute" rows="8" cols="80"></textarea>
+
+<p>Valitse näistä toinen: </p>
+  <p>
+    <input type="radio" name="mainos" value="mainos" />
+    Haluan saada mainospostia.<br />
+    <input type="radio" name="mainos" value="eimainos" />
+    En halua mainospostia.
+  </p>
+  <p>
+    Mistä pidät koulussa eniten? </p><p>
+      <input type="checkbox" name="boksi" value="ruoka">Ruoasta<br/>
+      <input type="checkbox" name="boksi" value="ammatti">Ammattiaineista<br/>
+      <input type="checkbox" name="boksi" value="yto">YTO-aineista<br/>
+      <input type="checkbox" name="boksi" value="vapaa">Vapaa-ajasta<br/>
+  </p>
+  <p>
+    <input type="submit" name="Tarkasta kentät" value="Tarkastetaan">
+    <input type="reset" name="Tyhjennä kentät" value="reset">
+  </p>
+    </form>
+  </body>
+</html>
