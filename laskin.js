@@ -1,6 +1,4 @@
 var numero = '';
-var tulos = 0;
-var merkki = '';
 function lisaa(luku)
 {
   numero+= luku;
