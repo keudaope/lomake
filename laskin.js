@@ -1,5 +1,4 @@
 var numero = '';
-var tulos = 0;
 var luku = '';
 var taulu = ['+','-','*','/','%'];
 var index = 0;
@@ -15,7 +14,7 @@ function laske()
   if(numero.search("%") > 0)
   {
     jono = numero.split('%');
-    numero = jono[0] * jono[1] / 100
+    numero = jono[0] * jono[1] / 100;
     document.getElementById('tulos').innerHTML = numero;
   }
   else{
