@@ -11,7 +11,17 @@ function lisaa(luku)
 
 function laske()
 {
-  document.getElementById('tulos').innerHTML = eval(numero);
+  var indeksi, jono;
+  if(numero.search("%") > 0)
+  {
+    jono = numero.split('%');
+    numero = jono[0] * jono[1] / 100
+    document.getElementById('tulos').innerHTML = numero;
+  }
+  else{
+    document.getElementById('tulos').innerHTML = eval(numero);
+    numero = eval(numero);
+  }
 }
 function tyhjenna()
 {
