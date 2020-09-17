@@ -13,7 +13,7 @@ function laske()
   var indeksi, jono;
   if(numero.search("%") > 0)
   {
-    jono = numero.split('%');
+    jono = numero.split('%'); // numero = 15%330 --> jono = [15, 330];
     numero = jono[0] * jono[1] / 100;
     document.getElementById('tulos').innerHTML = numero;
   }
