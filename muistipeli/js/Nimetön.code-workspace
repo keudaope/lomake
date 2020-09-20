@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../Opetus/Scrum"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "repot"
+	}
+}

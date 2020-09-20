@@ -1,0 +1,10 @@
+body {
+  margin: 0 auto;
+  background-image: url('../katti.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+h1, h3, p{
+  text-align: center;
+  color: white;
+}
