@@ -5,46 +5,27 @@
     <title></title>
     <!-- Linkitetään ulkoisiin tiedostoihin -->
     <link rel="stylesheet" href="todo.css">
-    <script src="todo.js"></script>
-    <script type="text/javascript" src="script_method3.js"></script>
+    <script  type="text/javascript" src="todo.js"></script>
   </head>
   <body>
     <!-- Luodaan ikkuna, johon sisältö laitetaan -->
   	<div class="container">
-      <!-- Luodaan jokaiselle uudelle tiedolle rivi-->
-  		<div class="row">
-  			<div class="intro col-12">
   		      <h1>Tehtäviä tehtäviä</h1>
-  				      <div>
-  					           <div class="border1"></div>
-  				</div>
-  			</div>
-  		</div>
 
-  		<div class="row">
-  			<div class="helpText col-12">
   				<p id="first">Lisätäksesi uuden tehtävän, syötä se alla olevaan kenttään</p>
   				<p id="second">Napauta tehtävää, kun olet tehnyt sen</p>
   				<p id="third">Napauta tehtävän perässä X-kirjainta poistaaksesi tehtävän</p>
-  			</div>
-  		</div>
 
-  		<div class="row">
-  			<div class="col-12">
-  				<input id="syotto" type="text" placeholder="Uusi tehtävä..." maxlength="27">
-  				<button id="painike" onclick="alku()"><i class="fas fa-pencil-alt"></i>Lisää tehtävä</button>
-  			</div>
-  		</div>
 
-  		<!-- Empty List -->
-  		<div class="row">
-  			<div class="listItems col-12">
-  				<ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+
+  				<input id="syotto" type="text" placeholder="Uusi tehtävä...">
+  				<button id="painike">Lisää tehtävä</button>
+
+  		<!-- Tyhjä lista -->
+  				<ul>
   				</ul>
-  			</div>
-  		</div>
 
   	</div>
-  	<script type="text/javascript" src="script_method3.js"></script>
+  	<script type="text/javascript" src="todo.js"></script>
   </body>
 </html>

@@ -3,6 +3,10 @@ body {
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 }
+.container{
+	margin: 0 auto;
+	width: 800px;
+}
 
 .intro {
 	margin: 30px 0px;
@@ -57,10 +61,13 @@ p {
 ul {
 	text-align: left;
 	margin-top: 20px;
+	padding-left: 20px;
 }
 
 
 li {
+	height: 20px;
+	width: 700px;
 	list-style: none;
 	padding: 10px 20px;
 	color: #ffffff;
@@ -95,6 +102,7 @@ input {
 	min-width: 65%;
 	padding: 5px;
 	border: none;
+	width: 400px;
 }
 
 

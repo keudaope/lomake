@@ -1,16 +1,10 @@
-function alku()
-{
   var enterButton = document.getElementById("painike");
   var input = document.getElementById("syotto");
-  alert(input);
   var ul = document.querySelector("ul");
   var item = document.getElementsByTagName("li");
   enterButton.addEventListener("click",addListAfterClick);
   input.addEventListener("keypress", addListAfterKeypress);
   createListElement();
-}
-
-
 
 function inputLength(){
 	return input.value.length;
@@ -21,18 +15,20 @@ function listLength(){
 }
 
 function createListElement() {
-	var li = document.createElement("li"); // creates an element "li"
-	li.appendChild(document.createTextNode(input.value)); //makes text from input field the li text
-	ul.appendChild(li); //adds li to ul
-	input.value = ""; //Reset text input field
-
+	var li = document.createElement("li"); // luo "li" elementin
+  if(input.value != '')
+  {
+    li.appendChild(document.createTextNode(input.value)); //lisää li-elementtiin tekstin, joka on laatikossa
+  	ul.appendChild(li); //lisää li-elementin ul-elementtiin
+  	input.value = ""; // Tyhjentää syöttökentän
+  }
 
 	//START STRIKETHROUGH
 	// because it's in the function, it only adds it for new items
 	function crossOut() {
 		li.classList.toggle("done");
 	}
-
+  // Kutsutaan ylläolevaa funktiota
 	li.addEventListener("click",crossOut);
 	//END STRIKETHROUGH
 
