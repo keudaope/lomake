@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <title></title>
     <!-- Linkitetään ulkoisiin tiedostoihin -->
     <link rel="stylesheet" href="todo.css">
-    <script  type="text/javascript" src="todo.js"></script>
   </head>
   <body>
     <!-- Luodaan ikkuna, johon sisältö laitetaan -->
@@ -15,17 +14,16 @@
   				<p id="first">Lisätäksesi uuden tehtävän, syötä se alla olevaan kenttään</p>
   				<p id="second">Napauta tehtävää, kun olet tehnyt sen</p>
   				<p id="third">Napauta tehtävän perässä X-kirjainta poistaaksesi tehtävän</p>
-
-
-
+          <!-- Luodaan syöttökenttä ja sille painike -->
   				<input id="syotto" type="text" placeholder="Uusi tehtävä...">
   				<button id="painike">Lisää tehtävä</button>
 
-  		<!-- Tyhjä lista -->
+  		<!-- Tyhjä lista, johon tehtävät laitetaan -->
   				<ul>
   				</ul>
 
   	</div>
+    <!-- Ajetaan tuo script-komento vasta täällä, että toimii -->
   	<script type="text/javascript" src="todo.js"></script>
   </body>
 </html>

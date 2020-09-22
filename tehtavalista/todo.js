@@ -1,21 +1,25 @@
+/* Haetaan lomakkeelta painike ja laitetaan sille clickauksen 'kuuntelu' */
   var enterButton = document.getElementById("painike");
-  var input = document.getElementById("syotto");
-  var ul = document.querySelector("ul");
-  var item = document.getElementsByTagName("li");
-  enterButton.addEventListener("click",addListAfterClick);
-  input.addEventListener("keypress", addListAfterKeypress);
-  createListElement();
+  enterButton.addEventListener("click",lisaaListaanNapauttaessa); // Perässsä funktio, jota kutsutaan
 
-function inputLength(){
+/* Haetaan lomakkeelta syöttökenttä ja laitetaan sille enterin 'kuuntelu' */
+  var input = document.getElementById("syotto");
+  input.addEventListener("keypress", lisaaListaanEnterilla); // Perässä funktio, jota kutsutaan
+
+/* Haetaan lomakkeelta järjestämätön lista, johon tehtävät syötetään */
+  var ul = document.querySelector("ul");
+
+/* Luodaan funktio, joka palauttaa syötetyn merkkijonon pituuden */
+function inputLength()
+{
 	return input.value.length;
 }
 
-function listLength(){
-	return item.length;
-}
-
-function createListElement() {
+/* Varsinainen lisäysfunktio */
+function luoListaElementti()
+{
 	var li = document.createElement("li"); // luo "li" elementin
+  // Tarkistetaan, että on syötetty jotain
   if(input.value != '')
   {
     li.appendChild(document.createTextNode(input.value)); //lisää li-elementtiin tekstin, joka on laatikossa
@@ -23,41 +27,43 @@ function createListElement() {
   	input.value = ""; // Tyhjentää syöttökentän
   }
 
-	//START STRIKETHROUGH
-	// because it's in the function, it only adds it for new items
+	// Aloitetaan tehdyn tehtävän värjäys
+	// koska se on funktiossa, se tekee sen vain lisättyihin tehtäviin
 	function crossOut() {
 		li.classList.toggle("done");
 	}
   // Kutsutaan ylläolevaa funktiota
 	li.addEventListener("click",crossOut);
-	//END STRIKETHROUGH
+	//Tehdyn tehtävän värjäys loppuu
 
 
-	// START ADD DELETE BUTTON
-	var dBtn = document.createElement("button");
-	dBtn.appendChild(document.createTextNode("X"));
-	li.appendChild(dBtn);
-	dBtn.addEventListener("click", deleteListItem);
-	// END ADD DELETE BUTTON
+	// Aloitetaan poistopainikkeen lisäys
+	var poisto = document.createElement("button"); // luodaan painike-elementti
+	poisto.appendChild(document.createTextNode("X")); // Lisätään siihen X-kirjain
+	li.appendChild(poisto); // Lisätään se kaikkiin li-elementteihin
+	poisto.addEventListener("click", poistaTehtava);
+	// Poistopainikkeen lisäys loppuu
 
 
-	//ADD CLASS DELETE (DISPLAY: NONE)
-	function deleteListItem(){
+	//Lisätään varsinainen poistofunktio (DISPLAY: NONE)
+	function poistaTehtava()
+  {
 		li.classList.add("delete")
 	}
-	//END ADD CLASS DELETE
-}
+}// Pääfunktio päättyy
 
 
-function addListAfterClick(){
-	if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
-		createListElement();
+function lisaaListaanNapauttaessa()
+{
+	if (inputLength() > 0) { //tarkistaa, että on syötetty jotain
+		luoListaElementti(); // Kutsuu 'pääfunktiota'
 	}
 }
 
-function addListAfterKeypress(event) {
-	if (inputLength() > 0 && event.which ===13) { //this now looks to see if you hit "enter"/"return"
-		//the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
-		createListElement();
+function lisaaListaanEnterilla(event)
+{
+	if (inputLength() > 0 && event.which ===13) { //Tarkistetaan, että Enter on painettu
+		//nro 13 on Enterin avainkoodi, voidaan kirjoittaa myös event.keyCode === 13
+		luoListaElementti(); // Kutsuu 'pääfunktiota'
 	}
 }
