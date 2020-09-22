@@ -22,7 +22,7 @@ function luoListaElementti()
   // Tarkistetaan, että on syötetty jotain
   if(input.value != '')
   {
-    li.appendChild(document.createTextNode(input.value)); //lisää li-elementtiin tekstin, joka on laatikossa
+    li.appendChild(document.createTextNode(input.value)); //lisätään li-elementtiin tekstin, joka on laatikossa
   	ul.appendChild(li); //lisää li-elementin ul-elementtiin
   	input.value = ""; // Tyhjentää syöttökentän
   }
