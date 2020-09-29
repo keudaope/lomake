@@ -11,26 +11,26 @@
   <body>
     <article class="" >
       <h1>Tietokantaan tallentava lomake</h1>
-      <form action="kysely.php" method="post" onsubmit="tarkista()">
+      <form action="kysely.php" method="get">
         <table>
           <tr>
             <td> <label for="etunimi">Etunimi:</label></td>
-            <td>  <input type="text" id="etunimi" value=""></td>
+            <td>  <input type="text" id="etunimi" name ="etunimi" value=""></td>
           </tr>
           <tr>
             <td> <label for="sukunimi">Sukunimi:</label></td>
-            <td> <input type="text" id="sukunimi" value=""></td>
+            <td> <input type="text" id="sukunimi" name="sukunimi" value=""></td>
           </tr>
           <tr>
             <td> <label for="lahiosoite">Lähiosoite:</label></td>
-            <td> <input type="text" id="lahiosoite" value=""></td>
+            <td> <input type="text" id="lahiosoite" name = "lahiosoite" value=""></td>
           </tr>
           <tr>
             <td> <label for="postinumero">Postinumero:</label></td>
-            <td><input type="text" id="postinumero" value=""></td>
+            <td><input type="text" id="postinumero" name="postinumero" value=""></td>
           </tr>
           <td><label for="postitoimipaikka">Postitoimipaikka:</label></td>
-          <td><input type="text" id="postitoimipaikka" value=""></td>
+          <td><input type="text" id="postitoimipaikka" name="postitoimipaikka" value=""></td>
         </table>
         <input type="submit" value="Tarkista ja lähetä">
       </form>

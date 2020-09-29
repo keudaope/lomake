@@ -6,11 +6,13 @@ $salasana = "O3kk1nks...";
 $tietokanta = "3596116_keuda";
 
 // Haetaan lomakkeelta muuttujat
-$enimi = $_POST["etunimi"];
-$snimi = $_POST["sukunimi"];
-$losoite = $_POST["lahiosoite"];
-$pnro = $_POST["postinumero"];
-$ptp = $_POST["postitoimipaikka"];
+$enimi = $_GET["etunimi"];
+$snimi = $_GET["sukunimi"];
+$losoite = $_GET["lahiosoite"];
+$pnro = $_GET["postinumero"];
+$ptp = $_GET["postitoimipaikka"];
+
+
 
 // Yhdistetään palvelimelle
 $link = mysqli_connect($palvelin, $kayttaja, $salasana, $tietokanta);
@@ -22,8 +24,7 @@ if(mysqli_connect_error()){
 
 	}
 
-  $talletus = "INSERT INTO Osoite(Etunimi,Sukunimi, Lahiosoite, Postinumero, Postitoimipaikka) VALUES
-  ('$enimi','$snimi','$losoite','$pnro','$ptp')";
+  $talletus = "INSERT INTO Osoite (Etunimi, Sukunimi, Lahiosoite, Postinumero, Postitoimipaikka) VALUES ('$enimi','$snimi','$losoite','$pnro','$ptp')";
 
   if (mysqli_query($link, $talletus)) {
       echo "Uudet tiedostot paivitetty";
