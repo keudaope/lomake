@@ -31,9 +31,9 @@ if(mysqli_connect_error()){
 } else {
       echo "Virhe: " . $talletus . "<br>" . mysqli_error($link);
 }
-mysqli_close($link);
-/*
-	$kysely = "SELECT * FROM employees WHERE SALARY >= 10000";
+//mysqli_close($link);
+
+	$kysely = "SELECT * FROM Osoite";
 	$vastaus = mysqli_query($link, $kysely);
 ?>
 <!DOCTYPE html>
@@ -50,16 +50,20 @@ mysqli_close($link);
 			<tr>
 				<th>Etunimi</th>
 				<th>Sukunimi</th>
-				<th>Palkka</th>
+				<th>Lähiosoite</th>
+				<th>Postinumero</th>
+				<th>Postitoimipaikka</th>
 			</tr>
 			<?php
 			while($rivit=mysqli_fetch_assoc($vastaus))
 			{
 			?>
 				<tr>
-					<td><?php echo $rivit['FIRST_NAME'] ?> </td>
-					<td><?php echo $rivit['LAST_NAME'] ?> </td>
-					<td><?php echo $rivit['SALARY'] ?> </td>
+					<td><?php echo $rivit['Etunimi'] ?> </td>
+					<td><?php echo $rivit['Sukunimi'] ?> </td>
+					<td><?php echo $rivit['Lahiosoite'] ?> </td>
+					<td><?php echo $rivit['Postinumero'] ?> </td>
+					<td><?php echo $rivit['Postitoimipaikka'] ?> </td>
 				</tr>
 			<?php
 			}
@@ -70,4 +74,3 @@ mysqli_close($link);
 <?php
 mysqli_close($link);
 ?>
-*/
