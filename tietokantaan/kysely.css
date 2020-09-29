@@ -1,0 +1,20 @@
+body
+{
+  margin: 20px;
+  background-color: #334422;
+}
+article{
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  heigth: 400px;
+  width: 300px;
+  background-color: #FF77EE;
+}
+h1{
+  font-size: 20px;
+  color: yellow;
+}
+input[type=button] {
+  margin-top: 20px;
+}

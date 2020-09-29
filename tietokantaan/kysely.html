@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="kysely.css">
+    <script type="text/javascript" src="kysely.js">
+
+    </script>
+    <title>Tietokantaan</title>
+  </head>
+  <body>
+    <article class="" >
+      <h1>Tietokantaan tallentava lomake</h1>
+      <form action="kysely.php" method="post" onsubmit="tarkista()">
+        <table>
+          <tr>
+            <td> <label for="etunimi">Etunimi:</label></td>
+            <td>  <input type="text" id="etunimi" value=""></td>
+          </tr>
+          <tr>
+            <td> <label for="sukunimi">Sukunimi:</label></td>
+            <td> <input type="text" id="sukunimi" value=""></td>
+          </tr>
+          <tr>
+            <td> <label for="lahiosoite">Lähiosoite:</label></td>
+            <td> <input type="text" id="lahiosoite" value=""></td>
+          </tr>
+          <tr>
+            <td> <label for="postinumero">Postinumero:</label></td>
+            <td><input type="text" id="postinumero" value=""></td>
+          </tr>
+          <td><label for="postitoimipaikka">Postitoimipaikka:</label></td>
+          <td><input type="text" id="postitoimipaikka" value=""></td>
+        </table>
+        <input type="submit" value="Tarkista ja lähetä">
+      </form>
+    </article>
+  </body>
+</html>

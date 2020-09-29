@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="lomake.css">
+    <script type="text/javascript" src="lomake.js">
+
+    </script>
     <title></title>
   </head>
   <body>
     <h1>Kirjautumislomake</h1>
 
 
-    <form class="" action="index.html" method="post">
+    <form class="" action="laheta.php" method="post">
       <table>
         <tr>
           <td>Nimi: </td>
@@ -38,6 +41,7 @@
       </select></p>
       <p>Kerro, miten kehittäisit sivujani:<br/>
       <textarea name="kehitys" rows="8" cols="50"></textarea> </p>
+      <input type="button" name="button" value="Lähetä" onclick="tarkasta()">
     </form>
 
   </body>
