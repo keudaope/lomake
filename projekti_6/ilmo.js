@@ -11,6 +11,15 @@ function chekkaa()
   var tantaja = document.getElementById('sukunimi').value;
   var titteli = document.getElementById('sukunimi').value;
   var saika = document.getElementById('sukunimi').value;
-  var osallistun = document.getElementById('sukunimi').value;
-  var rvalio = document.getElementById('sukunimi').value;
+  var osallistun = document.getElementById('sukunimi');
+  var rvalio = document.getElementById('sukunimi');
+
+  // Tarkistetaan etunimi
+  if(etunimi.length < 3)
+  alert(etunimi);
+  {
+    alert("Ole hyvä ja syötä etunimi");
+    document.getElementById('etunimi').focus;
+    return false;
+  }
 }
