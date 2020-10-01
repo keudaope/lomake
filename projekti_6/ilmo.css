@@ -1,0 +1,15 @@
+article{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  background-color: #FFCC21;
+  width: 400px;
+}
+h1{
+  text-align: center;
+  padding-top: 20px;
+}
+th{
+  text-align: left;
+  padding-left: 20px;
+}

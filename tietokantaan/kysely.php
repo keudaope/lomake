@@ -2,7 +2,7 @@
 // Otetaan yhteys tietokantaan
 $palvelin = "fdb28.awardspace.net";
 $kayttaja = "3596116_keuda";
-$salasana = "O3kk1nks...";
+$salasana = "EiSinunSilmillesi!@£$";
 $tietokanta = "3596116_keuda";
 
 // Haetaan lomakkeelta muuttujat
@@ -24,13 +24,18 @@ if(mysqli_connect_error()){
 
 	}
 
-  $talletus = "INSERT INTO Osoite (Etunimi, Sukunimi, Lahiosoite, Postinumero, Postitoimipaikka) VALUES ('$enimi','$snimi','$losoite','$pnro','$ptp')";
+  $talletus = "INSERT INTO Osoite
+	(Etunimi, Sukunimi, Lahiosoite, Postinumero, Postitoimipaikka)
+	VALUES ('$enimi','$snimi','$losoite','$pnro','$ptp')";
 
-  if (mysqli_query($link, $talletus)) {
+  if (mysqli_query($link, $talletus))
+	{
       echo "Uudet tiedostot paivitetty";
-} else {
+	}
+	else
+	{
       echo "Virhe: " . $talletus . "<br>" . mysqli_error($link);
-}
+	}
 //mysqli_close($link);
 
 	$kysely = "SELECT * FROM Osoite";
@@ -40,7 +45,7 @@ if(mysqli_connect_error()){
 <html>
 	<head>
 		<title>Tiedon haku tietokannasta</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="kysely.css">
 	</head>
 	<body>
 		<table border="1">

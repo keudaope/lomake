@@ -2,6 +2,8 @@ body
 {
   margin: 20px;
   background-color: #334422;
+  color: white;
+  font-size: 30px;
 }
 article{
   padding: 20px;
@@ -17,4 +19,17 @@ h1{
 }
 input[type=button] {
   margin-top: 20px;
+}
+table{
+  border-collapse: collapse;
+  background-color: orange;
+  font-size: 14px;
+}
+tr:nth-child(even){
+  background-color: yellow;
+  color: blue;
+}
+tr:nth-child(odd){
+  background-color: magenta;
+  color: yellow;
 }

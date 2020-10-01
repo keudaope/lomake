@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ilmoittautumislomake</title>
+    <link rel="stylesheet" href="ilmo.css">
+    <script type="text/javascript" src="ilmo.js">
+
+    </script>
+  </head>
+  <body>
+    <article class="">
+      <h1>Ilmoittautumislomake</h1>
+      <form class="" action="ilmo.php" method="post" onsubmit="chekkaa()">
+        <table>
+          <tr>
+            <th>Etunimet:</th>
+            <td><input type="text" name="etunimi" id="etunimi" value=""></td>
+          </tr>
+          <tr>
+            <th>Sukunimi:</th>
+            <td><input type="text" name="sukunimi" id="sukunimi" value=""></td>
+          </tr>
+          <tr>
+            <th>Lähiosoite:</th>
+            <td><input type="text" name="lahiosoite" id="lahiosoite" value=""></td>
+          </tr>
+          <tr>
+            <th>Postinumero:</th>
+            <td><input type="text" name="postinumero" id="postinumero" value=""></td>
+          </tr>
+          <tr>
+            <th>Postitoimipaikka:</th>
+            <td><input type="text" name="postitoimipaikka" id="postitoimipaikka" value=""></td>
+          </tr>
+          <tr>
+            <th>Puhelin:</th>
+            <td><input type="text" name="puhelin" name="puhelin" value=""></td>
+          </tr>
+          <tr>
+            <th>Sähköposti:</th>
+            <td><input type="email" name="sahkoposti" name="sahkoposti" value=""></td>
+          </tr>
+          <tr>
+            <th>Työnantaja:</th>
+            <td><input type="text" name="tyonantaja" id="tyonantaja" value=""></td>
+          </tr>
+          <tr>
+            <th>Titteli:</th>
+            <td><input type="text" name="titteli" id="titteli" value=""></td>
+          </tr>
+          <tr>
+            <th>Syntymäaika:</th>
+            <td><input type="date"  name="syntymäaika" id="syntymäaika" value=""></td>
+          </tr>
+          <tr>
+            <th>Osallistun:</th>
+            <td><input type="radio" name="osallistun" value="kokovkl">Koko viikonloppuun (250 €)<br/>
+            <input type="radio" name="osallistun" value="lauantai">Vain lauantaihin (150 €)<br/>
+            <input type="radio" name="osallistun" value="sunnuntai">Vain sunnuntaihin (150 €)</td>
+          </tr>
+          <tr>
+            <th>Erityisruokavaliot:</th>
+            <td><input type="checkbox" name="ruokavalio" value="keliakia">Keliakia<br/>
+            <input type="checkbox" name="ruokavalio" value="laktoosi">Laktoosi-intoleranssi<br/>
+            <input type="checkbox" name="ruokavalio" value="maito">Maitoallergia<br/>
+            <input type="checkbox" name="ruokavalio" value="muna">Kananmuna<br/>
+            <input type="checkbox" name="ruokavalio" value="kala">Kala <br/>
+            <input type="checkbox" name="ruokavalio" value="pahkina">Pähkinä<br/>
+            <input type="checkbox" name="ruokavalio" value="siemen">Siemen <br/>
+            <input type="checkbox" name="ruokavalio" value="hedelma">Hedelmät</td>
+          </tr>
+          <tr>
+            <td colspan=2 style="text-align: right"><input type="submit" name="Send" value="Lähetä"></td>
+          </tr>
+
+        </table>
+      </form>
+    </article>
+  </body>
+</html>
