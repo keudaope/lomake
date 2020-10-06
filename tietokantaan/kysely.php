@@ -2,7 +2,7 @@
 // Otetaan yhteys tietokantaan
 $palvelin = "fdb28.awardspace.net";
 $kayttaja = "3596116_keuda";
-$salasana = "EiSinunSilmillesi!@£$";
+$salasana = "O3kk1nks...";
 $tietokanta = "3596116_keuda";
 
 // Haetaan lomakkeelta muuttujat
@@ -24,9 +24,7 @@ if(mysqli_connect_error()){
 
 	}
 
-  $talletus = "INSERT INTO Osoite
-	(Etunimi, Sukunimi, Lahiosoite, Postinumero, Postitoimipaikka)
-	VALUES ('$enimi','$snimi','$losoite','$pnro','$ptp')";
+  $talletus = "INSERT INTO Osoite (Etunimi, Sukunimi, Lahiosoite, Postinumero, Postitoimipaikka) VALUES ('$enimi','$snimi','$losoite','$pnro','$ptp')";
 
   if (mysqli_query($link, $talletus))
 	{
@@ -64,11 +62,11 @@ if(mysqli_connect_error()){
 			{
 			?>
 				<tr>
-					<td><?php echo $rivit['Etunimi'] ?> </td>
-					<td><?php echo $rivit['Sukunimi'] ?> </td>
-					<td><?php echo $rivit['Lahiosoite'] ?> </td>
-					<td><?php echo $rivit['Postinumero'] ?> </td>
-					<td><?php echo $rivit['Postitoimipaikka'] ?> </td>
+					<td><input type="text" name="" value="<?php echo $rivit['Etunimi'] ?>"></td>
+					<td><input type="text" name="" value="<?php echo $rivit['Sukunimi'] ?>"></td>
+					<td><input type="text" name="" value="<?php echo $rivit['Lahiosoite'] ?>"></td>
+					<td><input type="text" name="" value="<?php echo $rivit['Postinumero'] ?>"></td>
+					<td><input type="text" name="" value="<?php echo $rivit['Postitoimipaikka'] ?>"></td>
 				</tr>
 			<?php
 			}

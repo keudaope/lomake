@@ -16,10 +16,33 @@ function chekkaa()
 
   // Tarkistetaan etunimi
   if(etunimi.length < 3)
-  alert(etunimi);
   {
-    alert("Ole hyvä ja syötä etunimi");
+    alert("Ole hyvä ja syötä kelvollinen etunimi");
     document.getElementById('etunimi').focus;
+    return false;
+  }
+  if(sukunimi.length < 5)
+  {
+    alert("Ole hyvä ja syötä kelvollinen sukunimi");
+    document.getElementById('sukunimi').focus;
+    return false;
+  }
+  if(lahi.length < 10)
+  {
+    alert("Ole hyvä ja syötä kelvollinen lähiosoite");
+    document.getElementById('lahiosoite').focus;
+    return false;
+  }
+  if(pnro.length < 5)
+  {
+    alert("Ole hyvä ja syötä kelvollinen postinumero");
+    document.getElementById('postinumero').focus;
+    return false;
+  }
+  if(ptp.length < 5)
+  {
+    alert("Ole hyvä ja syötä kelvollinen postitoimipaikka");
+    document.getElementById('postitoimipaikka').focus;
     return false;
   }
 }
